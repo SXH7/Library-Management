@@ -1,4 +1,7 @@
 create database library;
+
+use library;
+
 create table member(Mem_ID char(4) NOT NULL PRIMARY KEY, 
                     Mem_Name varchar(30) NOT NULL, 
                     Mem_DOB date NOT NULL, 

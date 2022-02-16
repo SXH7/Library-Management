@@ -1,4 +1,4 @@
-from aiohttp import BasicAuth
+
 import mysql.connector as i
 
 log=i.connect(host="localhost",user="root",password="remon",database="library")

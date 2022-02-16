@@ -1,12 +1,16 @@
-from asyncore import read
-from pydoc import importfile
-from select import select
 import mysql.connector as i
 from datetime import datetime
 
 log=i.connect(host="localhost",user="root",password="remon",database="library")
 
+def viewmemb():
 
+    c=log.cursor()
+    c.execute("select * from member")
+    result= c.fetchall()
+    for row in result:
+        print(row)
+        print("\n")
 
 def memberadd():
     mi=input("Enter member id given by admin:")
@@ -32,7 +36,3 @@ def memberadd():
     log.commit()
 
     print("Member added successfully")
-
-    
-
-   

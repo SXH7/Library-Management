@@ -6,14 +6,6 @@ from datetime import datetime
 
 log=i.connect(host="localhost",user="root",password="remon",database="library")
 
-def book():
-
-    c=log.cursor()
-    c.execute("select * from books")
-    result= c.fetchall()
-    for row in result:
-        print(row)
-        print("\n")
 
 
 def memberadd():
@@ -42,9 +34,5 @@ def memberadd():
     print("Member added successfully")
 
     
-memberadd()
-    
-    
-
 
    

@@ -11,3 +11,9 @@ create table member(Mem_ID char(4) NOT NULL PRIMARY KEY,
 
 create table genre(Gen_ID char(4) NOT NULL PRIMARY KEY,
                    Gen_Name varchar(15) NOT NULL);
+
+create table books(B_ID char(4) NOT NULL PRIMARY KEY,
+                   B_Name varchar(30) NOT NULL,
+                   B_Author varchar(30) NOT NULL,
+                   B_Publisher varchar(20),
+                   B_Avilable char(1) NOT NULL CHECK(B_Avilable = "Y" or B_Avilable = "N"));

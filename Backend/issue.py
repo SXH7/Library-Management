@@ -1,7 +1,9 @@
 import mysql.connector as i
 from datetime import datetime
 
+
 log=i.connect(host="localhost",user="root",password="remon",database="library")
+
 
 def viewissues():
 
@@ -28,7 +30,7 @@ def issuebook():
         list1=[]
         list1[:0]=string
         return list1
-
+    
     if 'Y' in res[0]:
         adate=input("Enter book issue date (MM-DD-YYYY):")
         bdate=input("Enter due date(MM-DD-YYYY):")
@@ -42,8 +44,22 @@ def issuebook():
         c.execute(sq,data)
         log.commit()
         print("Book issued successfully!")
+        
+        
+        data=(B)
+        sq=("update books set B_Avilable= replace(B_Avilable, 'Y','N') where B_ID=%s")
+        c=log.cursor()
+        c.execute(sq,data)
+        log.commit()
     else:
         print("Either book isnt avilable or code is wronge:")
         issuebook()
 
-    
+def bookupdate():
+    bc=input("Enter book id:")
+    B=(bc,)
+    data=(B)
+    sq=("update books set B_Avilable= replace(B_Avilable, 'N','Y') where B_ID=%s")
+    c=log.cursor()
+    c.execute(sq,data)
+    log.commit()

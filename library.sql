@@ -9,11 +9,6 @@ create table member(Mem_ID char(4) NOT NULL PRIMARY KEY,
                     Mem_address varchar(40) NOT NULL,
                     Mem_perms varchar(5) NOT NULL CHECK(Mem_perms = "Staff" or Mem_perms = "User"));
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 9f08944ab25cd8a429845caaafe94f9ccbd931b2
 create table books(B_ID char(4) NOT NULL PRIMARY KEY,
                    B_Name varchar(30) NOT NULL,
                    B_Author varchar(30) NOT NULL,

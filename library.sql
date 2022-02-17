@@ -17,7 +17,7 @@ create table books(B_ID char(4) NOT NULL PRIMARY KEY,
                    B_Author varchar(30) NOT NULL,
                    B_Publisher varchar(20),
                    B_Avilable char(1) NOT NULL CHECK(B_Avilable = "Y" or B_Avilable = "N")),
-                   B_Genre char(4) REFERENCES genre(Gen_ID);
+                   B_Genre char(4) NOT NULL REFERENCES genre(Gen_ID);
 
 create table issue(I_ID char(4) NOT NULL UNIQUE,
                    I_MemID char(4) REFERENCES member(Mem_ID),

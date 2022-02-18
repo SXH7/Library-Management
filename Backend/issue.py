@@ -25,11 +25,6 @@ def issuebook():
     sql=("select B_Avilable from books where B_ID=%s")
     c.execute(sql,B)
     res=c.fetchall()
-
-    def Convert(string):
-        list1=[]
-        list1[:0]=string
-        return list1
     
     if 'Y' in res[0]:
         adate=input("Enter book issue date (MM-DD-YYYY):")

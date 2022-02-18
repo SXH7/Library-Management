@@ -52,7 +52,7 @@ def issuebook():
         c.execute(sq,data)
         log.commit()
     else:
-        print("Either book isnt avilable or code is wronge:")
+        print("Either book isnt avilable or code is wrong:")
         issuebook()
 
 def bookupdate():
@@ -63,3 +63,5 @@ def bookupdate():
     c=log.cursor()
     c.execute(sq,data)
     log.commit()
+
+

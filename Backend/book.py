@@ -24,6 +24,3 @@ def addbook():
     c.execute(sql,data)
     log.commit()
     print("Book(s) Added sucessfully")
-
-addbook()
-viewbook()

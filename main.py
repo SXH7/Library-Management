@@ -46,16 +46,16 @@ def bookm():
 
 def ishmen():
     print("View issue database(1):")
-    print("Issue a book")
+    print("Issue a book(2)")
     an=input("Enter your response here:")
 
     if an=='1':
         print("The Issue details are in order of (Issue ID,Member ID,book code,Issue date,Due date")
-        viewbook()
+        viewissues()
         main()
     elif an=='2':
         print("--------------------You are in Create Issue menu--------------------")
-        addbook()
+        issuebook()
         main()
     else:
         print("Invalid input")
